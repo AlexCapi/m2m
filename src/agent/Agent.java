@@ -8,6 +8,7 @@ public class Agent implements Runnable{
 			Transporteur,
 	}
 	 
+	// Test 
 	public void init(){
 		
 	}
