@@ -1,24 +1,62 @@
 package environnement;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+
 public class Grille {
 	
-	public int rows;
-	public int columns;
-	public int[][] grille;
+	private int taille_x;
+	private int taille_y;
+	private ArrayList <Element> elementList;
 	
-	public Grille(int rows, int columns){
-		this.rows= rows;
-		this.columns= columns;
-		this.grille = new int[rows][columns];
-		initialise(this.grille);
+	public Grille(int x, int y){
+		this.setTaille_x(x);
+		this.setTaille_y(y);
+		this.elementList = new ArrayList<Element>();
+	}
+
+	public int getTaille_x() {
+		return taille_x;
+	}
+
+	public void setTaille_x(int taille_x) {
+		this.taille_x = taille_x;
+	}
+
+	public int getTaille_y() {
+		return taille_y;
+	}
+
+	public void setTaille_y(int taille_y) {
+		this.taille_y = taille_y;
+	}
+
+	public ArrayList<Element> getElementList() {
+		return elementList;
+	}
+
+	public void setElementList(ArrayList<Element> elementList) {
+		this.elementList = elementList;
+	}
+
+	public void addElement(Element element) {	
+		this.elementList.add(element);
 	}
 	
-	public void initialise(int grille[][]){
-        for(int a=0; a<rows; a++){
-            for(int b=0; b<columns; b++){
-                grille[a][b] = ;
-            }
-        }
+	public void deleteElement(Element element){
+		this.elementList.remove(element);
+	}
+	
+	public Element getElementByPosition(int pos_x, int pos_y){
+		Iterator<Element> it = elementList.iterator();
+		while (it.hasNext()) {
+			if(it.next().getPositionx() == pos_x){
+				if(it.next().getPositiony() == pos_y){
+					return it.next();
+				}
+			}
+		}
+		return null;
 	}
 	
 }
