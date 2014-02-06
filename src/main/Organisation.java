@@ -7,7 +7,7 @@ public class Organisation {
 	
 	public static void main(String[] args){
 		
-		Grille grille = new Grille(10,10);
+		Grille grille = new Grille(20,20);
 		
 		Base base = new Base(1,1);
 		grille.addElement(base);

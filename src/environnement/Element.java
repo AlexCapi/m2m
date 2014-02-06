@@ -1,5 +1,7 @@
 package environnement;
 
+import java.awt.Color;
+
 public class Element {
 	protected int positionx;
 	protected int positiony;
