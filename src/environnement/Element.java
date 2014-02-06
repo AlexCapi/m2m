@@ -7,14 +7,16 @@ public class Element {
 	public int getPositionx() {
 		return positionx;
 	}
+	
 	public void setPositionx(int positionx) {
 		this.positionx = positionx;
 	}
+	
 	public int getPositiony() {
 		return positiony;
 	}
+	
 	public void setPositiony(int positiony) {
 		this.positiony = positiony;
 	}
-	
 }

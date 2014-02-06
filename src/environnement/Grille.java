@@ -59,4 +59,20 @@ public class Grille {
 		return null;
 	}
 	
+	public boolean isFree(int pos_x, int pos_y){
+		Element element = getElementByPosition(pos_x,pos_y);
+		//Si il y a bien un élément à cette position sur la grille
+		if(element != null){
+			//Vérifier quel type d'Element est sur la case pour savoir si on peut y aller
+			if(element instanceof Minerai){
+				return true;
+			}else if(element instanceof Obstacle){
+				return false;
+			}else if(element instanceof Base){
+				return true;
+			}
+		}
+		//Sinon c'est que la case est libre
+		return true;
+	}
 }
