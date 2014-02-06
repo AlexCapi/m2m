@@ -1,7 +1,5 @@
 package environnement;
 
-import java.util.ArrayList;
-
 public class Grille {
 	
 	public int rows;
@@ -18,7 +16,7 @@ public class Grille {
 	public void initialise(int grille[][]){
         for(int a=0; a<rows; a++){
             for(int b=0; b<columns; b++){
-                grille[a][b] = 0;
+                grille[a][b] = ;
             }
         }
 	}

@@ -1,6 +1,8 @@
 package agent;
 
-public class Agent implements Runnable{
+import environnement.Element;
+
+public class Agent extends Element implements Runnable{
 
 	private enum Role {
 			Excavateur,
