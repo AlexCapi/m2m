@@ -9,22 +9,19 @@ public abstract class Agent extends Element implements Runnable{
 
     public void seDeplacer(){};
     
-    // Test 
-    public void init(){
+    public void appelerRavit(){}
+    
+    
+    public void init(){}
 
-    }
-
-    public void onReceive(){
-
-    }
+    public void onReceive(){}
 	
     @Override
-    public void run() {
+    public void run() {}
 
-    }
-
-    public void end(){
-
-    }
+    public void end(){}
+    
+    
+    
 	
 }
