@@ -61,6 +61,9 @@ public class Grille {
 	}
 	
 	public boolean isFree(int pos_x, int pos_y){
+		if(pos_x > taille_x || pos_x < 0 || pos_y > taille_y || pos_y < 0){
+			return false;
+		}
 		Element element = getElementByPosition(pos_x,pos_y);
 		//Si il y a bien un élément à cette position sur la grille
 		if(element != null){
