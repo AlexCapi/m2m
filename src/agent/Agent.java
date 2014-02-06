@@ -1,30 +1,30 @@
 package agent;
 
 import environnement.Element;
+import environnement.Grille;
 
-public class Agent extends Element implements Runnable{
+public abstract class Agent extends Element implements Runnable{
+    private int energy;
+    private Grille grille;
 
-	private enum Role {
-			Excavateur,
-			Chercheur,
-			Transporteur,
-	}
-	 
-	// Test 
-	public void init(){
-		
-	}
+    public void seDeplacer(){};
+    
+    // Test 
+    public void init(){
+
+    }
+
+    public void onReceive(){
+
+    }
 	
-	public void onReceive(){
-		
-	}
-	
-	public void run() {
-		
-	}
-	
-	public void end(){
-		
-	}
+    @Override
+    public void run() {
+
+    }
+
+    public void end(){
+
+    }
 	
 }
