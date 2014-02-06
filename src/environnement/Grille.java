@@ -48,11 +48,12 @@ public class Grille {
 	}
 	
 	public Element getElementByPosition(int pos_x, int pos_y){
-		Iterator<Element> it = elementList.iterator();
-		while (it.hasNext()) {
-			if(it.next().getPositionx() == pos_x){
-				if(it.next().getPositiony() == pos_y){
-					return it.next();
+		for (Element e : elementList) {
+			if(e != null){
+				if(e.getPositionx() == pos_x){
+					if(e.getPositiony() == pos_y){
+						return e;
+					}
 				}
 			}
 		}
