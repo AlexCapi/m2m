@@ -12,7 +12,7 @@ public class Agent extends Element implements Runnable{
         super(x, y);
     }
 
-    public void seDeplacer(){};
+    public void seDeplacer(int positionX, int positionY){};
     
     public void appelerRavit(){}
     
@@ -23,6 +23,10 @@ public class Agent extends Element implements Runnable{
             }
         }
         return null;
+    }
+    
+    public void setEnergy(int energy) {
+        this.energy = energy;
     }
     
     public void init(){}
