@@ -1,7 +1,13 @@
 package environnement;
 
+import java.awt.Color;
+import java.awt.GridLayout;
 import java.util.ArrayList;
-import java.util.Iterator;
+
+import javax.swing.BorderFactory;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.Border;
 
 public class Grille {
 	
@@ -13,6 +19,22 @@ public class Grille {
 		this.setTaille_x(x);
 		this.setTaille_y(y);
 		this.elementList = new ArrayList<Element>();
+		
+		JFrame frame = new JFrame();
+		frame.setSize(500, 600);
+		frame.setTitle("Mars attack");
+		
+		JPanel pan = new JPanel (new GridLayout (x,y));
+		Border blackline = BorderFactory.createLineBorder(Color.black,1); 
+		for(int i = 0; i < (x*y);i++){
+		   JPanel ptest = new JPanel();
+		   ptest.setBorder(blackline);
+		   pan.add(ptest);
+		}
+		pan.setBorder(blackline);
+		
+		frame.add(pan);
+		frame.setVisible(true);
 	}
 
 	public int getTaille_x() {
