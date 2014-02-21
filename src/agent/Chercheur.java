@@ -7,11 +7,11 @@ import environnement.Minerai;
 
 public class Chercheur extends Agent {
 
-	Random r = new Random();
-
-	public Chercheur() {
-
+	public Chercheur(int x, int y) {
+		super(x, y);
 	}
+
+	Random r = new Random();
 
 	public void seDeplacerRandom() {
 

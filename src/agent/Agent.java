@@ -7,7 +7,7 @@ import environnement.Grille;
 
 public class Agent extends Element implements Runnable{
     private int energy;
-    private Grille grille;
+    protected Grille grille;
     //server side of the Agent to accept new communications with new agents
     private Incoming incoming = null;
     
