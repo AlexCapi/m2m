@@ -15,8 +15,7 @@ public class Grille {
 	private int taille_y;
 	private ArrayList <Element> elementList;
 	
-<<<<<<< HEAD
-	
+/*
 	
 	public Grille(int rows, int columns){
 		this.rows= rows;
@@ -24,14 +23,14 @@ public class Grille {
 		this.grille = new int[rows][columns];
 		initialise(this.grille);
 	}
-	
+	*/
 	public void initialise(int grille[][]){
         for(int a=0; a<rows; a++){
             for(int b=0; b<columns; b++){
                 //grille[a][b] = ;
             }
         }
-=======
+
 	public Grille(int x, int y){
 		this.setTaille_x(x);
 		this.setTaille_y(y);
@@ -97,7 +96,7 @@ public class Grille {
 			}
 		}
 		return null;
->>>>>>> 0aa246edc11ae360b297fdc8af0e6dddbbe2b64c
+
 	}
 	
 	public boolean isFree(int pos_x, int pos_y){
