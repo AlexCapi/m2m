@@ -1,8 +1,12 @@
 package agent;
 
+import java.awt.Color;
+
 import environnement.Minerai;
 
 public class Transporteur extends Agent{
+	
+	 public final Color color = Color.BLACK;
     private Minerai minerai;
     
     public Transporteur(int x, int y) {

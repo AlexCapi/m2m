@@ -1,6 +1,11 @@
 package agent;
 
+import java.awt.Color;
+
 public class Ravitailleur extends Agent {
+	
+	 public final Color color = Color.BLACK;
+	 
     public Ravitailleur(int x, int y) {
         super(x, y);
     }
