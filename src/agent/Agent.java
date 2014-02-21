@@ -1,37 +1,43 @@
 package agent;
 
+import environnement.Base;
 import environnement.Element;
 import environnement.Grille;
 
-public abstract class Agent extends Element implements Runnable {
-	private int energy;
-	private Grille grille;
 
-	public void seDeplacer() {
-	};
+public class Agent extends Element implements Runnable{
+    private int energy;
+    private Grille grille;
+    
+    public Agent(int x, int y) {
+        super(x, y);
+    }
 
-	public void seDeplacerVers(int xB, int yB) {
+    public void seDeplacer(int positionX, int positionY){};
+    
+    public void appelerRavit(){}
+    
+    public Base getBase() {
+        for(Element e : grille.getElementList()) {
+            if(e instanceof Base){
+                return (Base) e;
+            }
+        }
+        return null;
+    }
+    
+    public void setEnergy(int energy) {
+        this.energy = energy;
+    }
+    
+    public void init(){}
 
-		int[] tab_pt = new int[8];
+    public void onReceive(){}
+	
+    @Override
+    public void run() {}
 
-		//tab_pt[0] = Math.sqrt(((xB-(this.positionx-1))^2 + (y_B-y_A)^2));
-
-	}
-
-	public void appelerRavit() {
-	}
-
-	public void init() {
-	}
-
-	public void onReceive() {
-	}
-
-	@Override
-	public void run() {
-	}
-
-	public void end() {
-	}
+    public void end(){}
+    
 
 }
