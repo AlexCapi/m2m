@@ -6,6 +6,8 @@ public class Grille {
 	public int columns;
 	public int[][] grille;
 	
+	
+	
 	public Grille(int rows, int columns){
 		this.rows= rows;
 		this.columns= columns;
@@ -16,7 +18,7 @@ public class Grille {
 	public void initialise(int grille[][]){
         for(int a=0; a<rows; a++){
             for(int b=0; b<columns; b++){
-                grille[a][b] = ;
+                //grille[a][b] = ;
             }
         }
 	}
