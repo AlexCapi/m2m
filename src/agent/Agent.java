@@ -8,7 +8,7 @@ public class Agent extends Element implements Runnable {
 	private int energy;
 	private Grille grille;
 
-<<<<<<< HEAD
+	
 	public Agent(int x, int y) {
 		super(x, y);
 	}
@@ -124,43 +124,6 @@ public class Agent extends Element implements Runnable {
 
 	public void end() {
 	}
-=======
-public class Agent extends Element implements Runnable{
-    private int energy;
-    private Grille grille;
-    //server side of the Agent to accept new communications with new agents
-    private Incoming incoming = null;
-    
-    public Agent(int x, int y) {
-        super(x, y);
-    }
 
-    public void seDeplacer(int positionX, int positionY){};
-    
-    public void appelerRavit(){}
-    
-    public Base getBase() {
-        for(Element e : grille.getElementList()) {
-            if(e instanceof Base){
-                return (Base) e;
-            }
-        }
-        return null;
-    }
-    
-    public void setEnergy(int energy) {
-        this.energy = energy;
-    }
-    
-    public void init(){}
-
-    public void onReceive(){}
-	
-    @Override
-    public void run() {}
-
-    public void end(){}
-    
->>>>>>> e2e56ec730a2df8a2a3daa8ba379514a6ee90306
 
 }
