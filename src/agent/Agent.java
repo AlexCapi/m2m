@@ -4,6 +4,7 @@ import environnement.Base;
 import environnement.Element;
 import environnement.Grille;
 
+
 public class Agent extends Element implements Runnable{
     private int energy;
     private Grille grille;
@@ -40,7 +41,5 @@ public class Agent extends Element implements Runnable{
 
     public void end(){}
     
-    
-    
-	
+
 }
