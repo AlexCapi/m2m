@@ -1,11 +1,21 @@
 package main;
 
-import agent.Agent;
+import environnement.*;
+import agent.*;
 
 public class Organisation {
 	
-	public void main(String args[]){
-		Agent firstAgent = new Agent();
+	public static void main(String[] args){
+		
+		Grille grille = new Grille(20,20);
+		
+		Base base = new Base(1,1);
+		grille.addElement(base);
+		
+		System.out.println(grille.getElementByPosition(1, 1));
+		System.out.println(grille.isFree(1, 11));
+		//Agent agent1 = new Agent();
+		//grille.addElement((Element) agent1);
 	}
 	
 }
