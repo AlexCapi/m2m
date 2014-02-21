@@ -3,6 +3,7 @@ package agent;
 import java.util.Random;
 
 import environnement.Element;
+import environnement.Grille;
 import environnement.Minerai;
 
 public class Chercheur extends Agent {
@@ -17,59 +18,58 @@ public class Chercheur extends Agent {
 
 		Element e = isminerais();
 
-		if (e.getClass() == Minerai.class) {
-			this.setPositionx(e.getPositionx());
-			this.setPositiony(e.getPositiony());
+		if (e.getClass() != null) {
+			seDelacer(e.getPositionx(), e.getPositiony());
 		} else {
+
 			int myRandomNumber = 0;
 			myRandomNumber = this.r.nextInt(1 - (-1) + 1) + (-1);
-			myRandomNumber = this.r.nextInt(1 - (-1) + 1) + (-1);
-
-			if (this.grille.isFree(this.getPositionx() + myRandomNumber,
-					this.getPositiony() + myRandomNumber)) {
-				this.setPositionx(this.getPositionx() + myRandomNumber);
-				this.setPositiony(this.getPositiony() + myRandomNumber);
-			}
+			seDelacer(this.getPositionx() + myRandomNumber, this.getPositiony()
+					+ myRandomNumber);
 		}
 	}
 
 	public Element isminerais() {
 
 		Element e = null;
+		Grille g = this.getGrille();
 
-		if (this.grille.getElementByPosition(this.getPositionx() + 1,
-				this.getPositiony() + 1) != null) {
-			if (this.grille.isFree(this.getPositionx() + 1,
-					this.getPositiony() + 1)) {
-				return this.grille.getElementByPosition(
-						this.getPositionx() + 1, this.getPositiony() + 1);
+		if (g.getElementByPosition(this.getPositionx() + 1,this.getPositiony() + 1) != null) {
+			if (g.isFree(this.getPositionx() + 1, this.getPositiony() + 1)) {
+				e = g.getElementByPosition(this.getPositionx() + 1,this.getPositiony() + 1);
+				if (e.getClass() == Minerai.class) 
+				{
+					return e;
+				}
+				 
 			}
-		} else if (this.grille.getElementByPosition(this.getPositionx() + 1,
-				this.getPositiony() - 1) != null) {
-			if (this.grille.isFree(this.getPositionx() + 1,
-					this.getPositiony() - 1)) {
-				return this.grille.getElementByPosition(
-						this.getPositionx() + 1, this.getPositiony() - 1);
+		} else if (g.getElementByPosition(this.getPositionx() + 1, this.getPositiony() - 1) != null) {
+			if (g.isFree(this.getPositionx() + 1, this.getPositiony() - 1)) {
+				e = g.getElementByPosition(this.getPositionx() + 1, this.getPositiony() - 1);
+				if (e.getClass() == Minerai.class) 
+				{
+					return e;
+				}
 			}
-		} else if (this.grille.getElementByPosition(this.getPositionx() - 1,
-				this.getPositiony() + 1) != null) {
-			if (this.grille.isFree(this.getPositionx() - 1,
-					this.getPositiony() + 1)) {
-
-				return this.grille.getElementByPosition(
-						this.getPositionx() - 1, this.getPositiony() + 1);
+		} else if (g.getElementByPosition(this.getPositionx() - 1, this.getPositiony() + 1) != null) {
+			if (g.isFree(this.getPositionx() - 1, this.getPositiony() + 1)) {
+				e = g.getElementByPosition(this.getPositionx() - 1, this.getPositiony() + 1);
+				if (e.getClass() == Minerai.class) 
+				{
+					return e;
+				}
 			}
-		} else if (this.grille.getElementByPosition(this.getPositionx() - 1,
-				this.getPositiony() - 1) != null) {
-			if (this.grille.isFree(this.getPositionx() - 1,
-					this.getPositiony() - 1)) {
-
-				return this.grille.getElementByPosition(
-						this.getPositionx() - 1, this.getPositiony() - 1);
+		} else if (g.getElementByPosition(this.getPositionx() - 1, this.getPositiony() - 1) != null) {
+			if (g.isFree(this.getPositionx() - 1, this.getPositiony() - 1)) {
+				e = g.getElementByPosition(this.getPositionx() - 1, this.getPositiony() - 1);
+				if (e.getClass() == Minerai.class) 
+				{
+					return e;
+				}
 			}
 		}
 
-		return e;
+		return e = null;
 
 	}
 }
